@@ -1,0 +1,107 @@
+.wrapp{
+	width: 1000px;
+	height: 286px;
+	margin: 100px auto;
+	position: relative;
+	/* overflow: hidden; */
+}
+body{
+	background: orange;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.wrapp .slide ul{
+	list-style: none;
+	
+}
+.wrapp .slide ul li {
+	position: absolute;
+	height: 286px;
+	width: 520px;
+	top: 0px;
+	left: 240px;
+	/* background-position: center center; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	/* 图1*/
+/* 	width: 100%;
+	height: 208px;
+	top: 40px;
+	left: 0px;
+	opacity: 0.3;
+	z-index: 1; */
+	
+	/* 图2*/
+/* 	height: 230px;
+	top: 29px;
+	left: 80px;
+	opacity: 0.6;
+	z-index: 2; */
+	
+	/* 图3*/
+	/* height: 258px;
+	top: 15px;
+	left: 160px;
+	opacity: 0.8;
+	z-index: 3; */
+	
+	/* 图4*/
+	/* height: 286px;
+	top: 0px;
+	left: 240px;
+	opacity: 1;
+	z-index: 4; */
+	
+	/* 图5 */
+	/* height: 258px;
+	top: 15px;
+	right: 160px;
+	opacity: 0.8;
+	z-index: 3; */
+	
+	/* 图6*/
+	/* height: 230px;
+	top: 29px;
+	right: 80px;
+	opacity: 0.6;
+	z-index: 2; */
+	
+	/* 图7*/
+	/* height: 208px;
+	top: 40px;
+	right: 0px;
+	opacity: 0.3;
+	z-index: 1; */
+}
+/* .wrapp .slide ul li img{
+	width: 100%;
+} */
+.wrapp .btn{
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	top: 50%;
+	margin-top: -30px;
+	z-index: 100;
+	/* border: 1px solid blue; */
+}
+.wrapp .btn .left1{
+	display: block;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 90px;
+	background: url(../img/left.png)no-repeat center center;
+}
+.wrapp .btn .right{
+	display: block;
+	width: 60px;
+	height: 60px;
+	float: right;
+	margin-right: 90px;
+	background: url(../img/right.png)no-repeat center center;
+}

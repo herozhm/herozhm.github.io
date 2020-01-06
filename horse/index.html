@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/xzmm.css"/>
+	</head>
+	<body>
+		<div class="wrapp" id="wrapp">
+			<div class="slide" id="slide">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/slidepic1.png" >
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/slidepic2.png" >
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/slidepic3.png" >
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/slidepic4.png" >
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/slidepic5.png" >
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="arrow">
+				<a href="javascript:;" class="prev"></a>
+				<a href="javascript:;" class="next"></a>
+			</div>
+		</div>
+		<script src="js/base.js"></script>
+		<script>
+			// 存储每张图片位置
+			var json = [
+				{
+					width:400,
+					top:0,
+					left:50,
+					opacity:30,
+					z:1
+				},{
+					width:600,
+					top:50,
+					left:0,
+					opacity:80,
+					z:2
+				},{
+					width:800,
+					top:80,
+					left:200,
+					opacity:100,
+					z:3
+				},{
+					width:600,
+					top:50,
+					left:600,
+					opacity:80,
+					z:2
+				},{
+					width:400,
+					top:0,
+					left:750,
+					opacity:30,
+					z:1
+				}
+			]
+			var slide = $("#slide");
+			var wrapp = $("#wrapp");
+			var lis = slide.children[0].children;  //获取所有li
+			// console.log(lis);
+			var arrow = $(".arrow")[0];
+			var as = arrow.children;
+			
+			// 鼠标经过盒子显示按钮
+			wrapp.onmouseover = function(){
+				animate(arrow,{"opacity":100});
+			}
+			wrapp.onmouseout = function(){
+				animate(arrow,{"opacity":0});
+			}
+			console.log(as);
+			
+			var liuzhuan = true;  //开关
+			// 遍历对象,为添加事件
+			for(k in as){
+				
+				as[k].onclick = function(){
+					if(this.className == "prev"){
+						// 左按钮
+						if(liuzhuan){
+							liuzhuan = false;
+							change(true);
+						}
+					}else{
+						if(liuzhuan){
+							liuzhuan = false;
+							change(false);
+						}
+					}
+				}
+			}
+			change();  //默认打开页面赋值
+			function change(flag){
+				if(flag){
+					// json.pop() 删掉数组最后一位
+					// json.unshift()添加数组第一位
+					
+					json.unshift(json.pop());
+				}else{
+					// json.shift()  删除数组第一位
+					// json.push()添加数组第一位
+					json.push(json.shift());
+				}
+				
+				// 每一个li添加动画效果
+				for(var i =0; i<lis.length; i++){
+					animate(lis[i],{
+						"width":json[i].width,
+						"top":json[i].top,
+						"left":json[i].left,
+						"opacity":json[i].opacity,
+						"zIndex":json[i].z
+					},function(){
+						liuzhuan = true;
+					
+					})
+				}
+			}
+			
+		</script>
+	</body>
+</html>

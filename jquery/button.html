@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        .box {
+            width: 120px;
+            height: 50px;
+            margin: 0 auto;
+            background: orange;
+            overflow: hidden;
+            position: relative;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .box .circle {
+            width: 300px;
+            height: 300px;
+            background: lightseagreen;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scale(0);
+        }
+        
+        .box.active .circle {
+            transform: scale(1);
+        }
+        
+        .box span {
+            display: block;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            font-size: 20px;
+            color: white;
+            z-index: 20;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>one</span>
+        <div class="circle"></div>
+    </div>
+    <div class="box">
+        <span>two</span>
+        <div class="circle"></div>
+    </div>
+    <div class="box">
+        <span>three</span>
+        <div class="circle"></div>
+    </div>
+
+    <script>
+        $(".box").mouseenter(function(event) {
+            // console.log(event.clientX);
+            // console.log(event.clientY);
+            var x = (event.pageX || event.clientX) - $(this).offset().left;
+            var y = (event.pageY || event.clientY) - $(this).offset().top;
+
+            console.log(x, y);
+
+            $(".box")
+                .children(".circle")
+                .css({
+                    top: y - $(".box .circle").height() / 2,
+                    left: x - $(".box .circle").width() / 2
+                })
+            $(this).addClass("active")
+        });
+        $(".box").mouseleave(function() {
+            $(this).removeClass("active")
+        });
+    </script>
+</body>
+
+</html>

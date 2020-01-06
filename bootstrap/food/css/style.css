@@ -1,0 +1,150 @@
+body {
+  background-color: #F2F2F2;
+}
+.head {
+  padding-top: 20px;
+}
+.head div {
+  height: 100px;
+}
+.head div a {
+  display: block;
+  height: 100%;
+  background: url(../img/logo.png) no-repeat center center;
+}
+.menu {
+  padding-top: 22px;
+}
+.menu .container {
+  text-align: center;
+}
+.menu .container a {
+  display: inline-block;
+  color: #997157;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 50px;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.menu .container a:hover {
+  text-decoration: none;
+}
+.wrapp {
+  margin-top: 20px;
+}
+.wrapp .container-fluid {
+  padding: 0;
+}
+.wrapp .container-fluid .item img {
+  width: 100%;
+}
+.sign {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.sign .container-fluid {
+  padding: 0;
+}
+.sign .top {
+  height: 280px;
+  background: url(../img/s.png) no-repeat center center;
+  background-size: cover;
+}
+.content .card .row {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.content .card .row li {
+  padding: 0px 10px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.content .card .row li .bg {
+  padding-top: 50px;
+  background: #fff;
+  transition: all 0.3s;
+}
+.content .card .row li .bg:hover {
+  box-shadow: 2px 2px 10px #ccc;
+  transform: translateZ(10px);
+}
+.content .card .row li .bg a img {
+  width: 100%;
+}
+.content .card .row li .bg .desc {
+  padding: 50px 0px;
+  text-align: center;
+}
+.content .card .row li .bg .desc a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 35px;
+  color: #222;
+}
+.content .card .row li .bg .desc a:hover {
+  text-decoration: none;
+}
+.content .card .row li .bg .desc span {
+  font-size: 16px;
+  color: #f0a139;
+  font-weight: 600;
+  line-height: 18px;
+}
+.cake {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.cake .container-fluid {
+  padding: 0;
+}
+.cake .top {
+  height: 280px;
+  background: url(../img/s2.png) no-repeat center center;
+  background-size: cover;
+}
+.recommend {
+  margin-top: 20px;
+}
+.recommend .row .back {
+  padding: 10px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #ccc;
+}
+.recommend .row .back img {
+  width: 100%;
+}
+.recommend .row .lef {
+  margin-top: 55px;
+}
+.recommend .row .lef h2 {
+  font-size: 24px;
+  color: #ccac56;
+  font-weight: 600;
+  margin: 28px 55px;
+}
+.recommend .row .lef .text {
+  margin: 0px 55px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+.recommend .foot h2.tit {
+  color: #b35656;
+}
+.pic {
+  padding: 0;
+  height: 500px;
+  width: 100%;
+  background: url(../img/wrapper_bigimage.jpg) no-repeat center center;
+  margin-top: 60px;
+  background-size: cover;
+}
+.footer {
+  margin-top: 60px;
+}
+.footer .top {
+  height: 300px;
+  background: url(../img/s5.png) no-repeat center center;
+}

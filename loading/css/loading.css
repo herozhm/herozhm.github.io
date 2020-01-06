@@ -1,0 +1,571 @@
+body {
+    background: rgb(226, 225, 225);
+}
+
+.stage {
+    width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    /* position: relative; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(116, 224, 231, 0.178)); */
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.stage p {
+    font-size: 32px;
+    margin: 0;
+    line-height: 32px;
+    text-shadow: 1px 2px 0 #ccc;
+}
+
+.stage .strip {
+    float: left;
+    margin-top: 50px;
+}
+
+.stage .strip>span {
+    width: 8px;
+    height: 60px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 5px;
+    transition: all 0.3s;
+    animation: change 1s linear infinite;
+}
+
+.stage .strip span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stage .strip span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.stage .strip span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.stage .strip span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+@keyframes change {
+    0% {
+        transform: scaleY(0.2);
+        background: rgb(84, 224, 41);
+    }
+    50% {
+        transform: scaleY(0.5);
+        background: lightskyblue;
+    }
+    100% {
+        transform: scaleY(1);
+        background: rgb(84, 224, 41);
+    }
+}
+
+.stage .myrange {
+    float: left;
+    margin: 80px;
+}
+
+.stage .range {
+    width: 150px;
+    height: 8px;
+    border-radius: 5px;
+    background: rgb(84, 224, 41);
+    overflow: hidden;
+}
+
+.stage .range span {
+    display: block;
+    background: lightblue;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    animation: myrange 3s infinite;
+}
+
+@keyframes myrange {
+    0% {
+        transform: translate(0px);
+    }
+    100% {
+        transform: translate(150px);
+    }
+}
+
+.stage .circle {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(84, 224, 41);
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    animation: run 3s linear infinite;
+}
+
+.stage .circle span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: lightskyblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: changecolor 3s linear infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: rotate(0deg);
+        border-color: rgb(84, 224, 41);
+    }
+    100% {
+        transform: rotate(360deg);
+        border-color: lightskyblue;
+    }
+}
+
+@keyframes changecolor {
+    0% {
+        background: rgb(84, 224, 41);
+    }
+    100% {
+        background: lightskyblue;
+    }
+}
+
+.stage .loading {
+    float: left;
+    width: 150px;
+    height: 15px;
+    margin: 80px;
+}
+
+.stage .loading span {
+    display: inline-block;
+    width: 15px;
+    height: 100%;
+    border-radius: 50%;
+    background: rgb(84, 224, 41);
+    margin-right: 5px;
+    animation: load 1s ease infinite;
+}
+
+.stage .loading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stage .loading span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.stage .loading span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.stage .loading span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.stage .loading span:nth-child(6) {
+    animation-delay: 0.9s;
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.load {
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 30px;
+}
+
+.load span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(84, 224, 41);
+    position: absolute;
+    animation: loadrun 1.5s ease infinite;
+}
+
+.load span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    animation-delay: 0.2s;
+}
+
+.load span:nth-child(2) {
+    left: 14px;
+    top: 14px;
+    animation-delay: 0.3s;
+}
+
+.load span:nth-child(3) {
+    left: 50%;
+    top: 0;
+    margin-left: -8px;
+    animation-delay: 0.4s;
+}
+
+.load span:nth-child(4) {
+    right: 14px;
+    top: 14px;
+    animation-delay: 0.5s;
+}
+
+.load span:nth-child(5) {
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    animation-delay: 0.6s;
+}
+
+.load span:nth-child(6) {
+    right: 14px;
+    bottom: 14px;
+    animation-delay: 0.8s;
+}
+
+.load span:nth-child(7) {
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    animation-delay: 1s;
+}
+
+.load span:nth-child(8) {
+    left: 14px;
+    bottom: 14px;
+    animation-delay: 1.2s;
+}
+
+@keyframes loadrun {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.stage .loadcircle {
+    width: 150px;
+    float: left;
+    position: relative;
+    top: 30px;
+    left: 80px;
+    margin: 20px;
+}
+
+.stage .loadcircle>div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: lightskyblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: small 1s 0s linear infinite;
+}
+
+@keyframes small {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.stage .squert {
+    float: left;
+    width: 150px;
+    height: 15px;
+    position: relative;
+    margin: 80px;
+}
+
+.stage .squert>span {
+    display: inline-block;
+    width: 15px;
+    height: 100%;
+    background: rgb(84, 224, 41);
+    margin-right: 5px;
+    /* transform: rotate(65deg); */
+    animation: mysquert 1s ease infinite;
+}
+
+.stage .squert>span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stage .squert>span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.stage .squert>span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.stage .squert>span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.stage .squert>span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.stage .squert>span:nth-child(8) {
+    animation-delay: 1s;
+}
+
+@keyframes mysquert {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(90deg);
+        background: lightskyblue;
+    }
+}
+
+.stage .eat {
+    float: left;
+    position: relative;
+    margin: 60px;
+}
+
+.stage .eat div:nth-child(1) {
+    width: 0;
+    height: 0;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #279fcf;
+    border-left: 25px solid #279fcf;
+    border-bottom: 25px solid #279fcf;
+    border-radius: 25px;
+    animation: rotate-up 0.5s linear infinite;
+}
+
+.stage .eat div:nth-child(2) {
+    width: 0;
+    height: 0;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #279fcf;
+    border-left: 25px solid #279fcf;
+    border-bottom: 25px solid #279fcf;
+    border-radius: 25px;
+    margin-top: -50px;
+    animation: rotate-down 0.5s linear infinite;
+}
+
+.stage .eat .one {
+    width: 10px;
+    height: 10px;
+    background: #279fcf;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    margin: 2px;
+    transform: translate(0, -6.25px);
+    animation: ball 1s 0.2s linear infinite;
+}
+
+.stage .eat .two {
+    width: 10px;
+    height: 10px;
+    background: #279fcf;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    margin: 2px;
+    transform: translate(0, -6.25px);
+    animation: ball 1s 0.5s linear infinite;
+}
+
+.stage .eat .three {
+    width: 10px;
+    height: 10px;
+    background: #279fcf;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    margin: 2px;
+    transform: translate(0, -6.25px);
+    animation: ball 1s 0.8s linear infinite;
+}
+
+@keyframes rotate-down {
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate-up {
+    0% {
+        transform: rotate(270deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes ball {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-100px, -6.25px);
+    }
+}
+
+.stage .letter {
+    float: left;
+    margin: 60px;
+}
+
+.stage .letter p {
+    display: inline-block;
+    font-size: 52px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    animation: myletter 1s linear infinite;
+}
+
+.stage .letter p:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stage .letter p:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stage .letter p:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stage .letter p:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.stage .letter p:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.stage .letter p:nth-child(6) {
+    animation-delay: 0.8s;
+}
+
+.stage .letter p:nth-child(7) {
+    animation-delay: 0.9s;
+}
+
+@keyframes myletter {
+    0% {
+        transform: scale(0.5);
+        color: #000;
+    }
+    20% {
+        transform: scale(1);
+        color: pink;
+        filter: drop-shadow(0 0 1px #000), drop-shadow(0 0 1px #000), drop-shadow(0 0 3px red), drop-shadow(0 0 5px red);
+    }
+    100% {
+        transform: scale(0.5);
+        color: #000;
+    }
+}
+
+.stage .border {
+    float: left;
+    margin: 50px;
+    width: 300px;
+    position: relative;
+}
+
+.stage .border .b-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    border: 5px solid #ffab91;
+    background: #37474f;
+    animation: myborder 1s ease-in-out infinite;
+}
+
+.stage .border .b-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    border: 5px solid lightskyblue;
+    background: #37474f;
+    transform: rotate(45deg);
+    animation: myborder-re 1s ease-in-out infinite;
+}
+
+@keyframes myborder {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes myborder-re {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}

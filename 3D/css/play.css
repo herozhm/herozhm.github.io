@@ -1,0 +1,172 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: url(../img/325420.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stage {
+  width: 200px;
+  perspective: 1000px;
+}
+.stage .cube {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transform: rotateX(-45deg) rotateY(-45deg);
+  transform-style: preserve-3d;
+  animation: run 10s linear infinite;
+}
+.stage .cube div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in;
+  border-radius: 20px;
+}
+.stage .cube div:nth-child(1) {
+  background: url(../img/meinv1.jpg) no-repeat center center;
+  background-size: cover;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.stage .cube div:nth-child(2) {
+  background: url(../img/meinv2.jpg) no-repeat center center;
+  background-size: cover;
+  transform: rotateX(90deg) translateZ(-100px);
+}
+.stage .cube div:nth-child(3) {
+  background: url(../img/meinv5.jpg) no-repeat center center;
+  background-size: cover;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.stage .cube div:nth-child(4) {
+  background: url(../img/meinv6.jpg) no-repeat center center;
+  background-size: cover;
+  transform: rotateY(90deg) translateZ(-100px);
+}
+.stage .cube div:nth-child(5) {
+  background: url(../img/meinv8.jpg) no-repeat center center;
+  background-size: cover;
+  transform: translateZ(100px);
+}
+.stage .cube div:nth-child(6) {
+  background: url(../img/meinv9.jpg) no-repeat center center;
+  background-size: cover;
+  transform: translateZ(-100px);
+}
+.stage .cube span {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: #ffe7f9;
+  border: 5px solid #424242;
+  border-radius: 30%;
+}
+.stage .cube span i {
+  display: block;
+  background: #bb9aff;
+  border-radius: 50%;
+}
+.stage .cube span i.ponits {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+.stage .cube span i.ponits-T {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+}
+.stage .cube span i.ponits-R {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+.stage .cube span i.ponits-R:nth-child(2) {
+  align-self: center;
+}
+.stage .cube span i.ponits-R:nth-child(3) {
+  align-self: flex-end;
+}
+.stage .cube span i.ponits-F {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+.stage .cube span i.ponits-S {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+.stage .cube span.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(90deg) translateZ(50px);
+}
+.stage .cube span.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(90deg) translateZ(-50px);
+}
+.stage .cube span.three {
+  display: flex;
+  transform: rotateY(90deg) translateZ(50px);
+}
+.stage .cube span.four {
+  display: flex;
+  flex-wrap: wrap;
+  transform: rotateY(90deg) translateZ(-50px);
+}
+.stage .cube span.five {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  transform: translateZ(50px);
+}
+.stage .cube span.six {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  transform: translateZ(-50px);
+}
+.stage:hover .cube div.top {
+  transform: rotateX(90deg) translateZ(240px);
+}
+.stage:hover .cube div.bottom {
+  transform: rotateX(90deg) translateZ(-240px);
+}
+.stage:hover .cube div.left {
+  transform: rotateY(90deg) translateZ(240px);
+}
+.stage:hover .cube div.right {
+  transform: rotateY(90deg) translateZ(-240px);
+}
+.stage:hover .cube div.front {
+  transform: translateZ(240px);
+}
+.stage:hover .cube div.after {
+  transform: translateZ(-240px);
+}
+@keyframes run {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(360deg) rotateZ(360deg);
+  }
+}

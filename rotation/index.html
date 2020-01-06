@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mi.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="wrapp" id="slide">
+				<ul>
+					<li>
+						<img src="img/hed2.jpg" >
+					</li>
+					<li>
+						<img src="img/hed4.jpg" >
+					</li>
+					<li>
+						<img src="img/hed1.jpg" >
+					</li>
+					<li>
+						<img src="img/hed3.jpg" >
+					</li>
+				</ul>
+				<div class="btn">
+					<div class="Left"></div>
+					<div class="Right"></div>
+				</div>
+				<ol>
+					<li class="con"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript">
+			var slide = $("#slide");  //外边盒子
+			var ols = slide.find("ol>li");  //ol下的li
+			var ul = slide.find("ul");   //ul对象
+			var picLi = ul.find("li");  //ul下所有li对象
+            var imgW = picLi.eq(0).width();   //图片宽度	
+			var Left = slide.find(".Left");  //左按钮
+			var Right = slide.find(".Right");  //右按钮
+			
+			var index = 1; //标记
+			
+			// 前后添加图片
+			picLi.first().clone().appendTo(ul);  //把第一张图片复制后添加到ul后面
+			picLi.last().clone().prependTo(ul);  //把最后一张图片复制后添加到ul前面
+			
+			// ul 宽度计算:每张图片宽度 * ul 下li的个数
+			ul.css({
+				"width":ul.children().length * imgW,
+				"left":"-" + imgW + "px"
+			})
+			
+			ols.click(function(){
+				// 获取下一个图片位置
+				index = $(this).index() + 1;
+				// 动画效果
+				ul.stop().animate({
+					"left":"-" + imgW * index + "px"
+				},1000)
+				
+				// 小圆点背景
+				$(this).addClass("con").siblings().removeClass("con");
+			})
+			Left.click(function(){
+				if(index == 1){
+					ul.css("left", "-" + (picLi.length + 1) * imgW + "px");
+					index = picLi.length;
+					
+				}else{
+					index--;
+				}
+				
+				// 动画效果
+				ul.stop().animate({
+					"left":"-" + imgW * index + "px"
+				},1000)
+				
+				// 小圆点背景
+				ols.eq(index-1).addClass("con").siblings().removeClass("con");
+			})
+			
+			Right.click(function(){
+				if(index == picLi.length){
+					ul.css('left','0px');
+					index = 1;
+				}else{
+					index++;
+				}
+				
+				// 动画效果
+				ul.stop().animate({
+					"left":"-" + imgW * index + "px"
+				},1000)
+				
+				// 小圆点背景
+				ols.eq(index-1).addClass("con").siblings().removeClass("con");
+			})
+			
+		</script>
+	</body>
+</html>

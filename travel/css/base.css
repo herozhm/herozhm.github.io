@@ -1,0 +1,100 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,a,i,em,b,strong,img,input,br{
+	margin: 0px;
+	padding: 0px;
+}
+br{
+	height: 0px;
+	line-height: 0px;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+img{
+	width:100%;
+	height: auto;
+}
+
+dt{
+	font-size: 14px;
+}
+dd{
+	font-size: 12px;
+}
+
+/* 公共样式 */
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+input {
+	background: none;
+	outline: none;  /* 处理输入框蓝色边 */
+	padding: 0px;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+	/* 为了兼容ie浏览器 */
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+.mt{
+	margin-top: 15px;
+}
+.ml{
+	margin-left: 62px;
+}
+.mleft{
+	margin-left: 10px;
+}
+.mtop{
+	margin-top: 16px;
+}
+.mr{
+	margin-right: 15px;
+}
+.mup{
+	margin-top: 11px;
+}
+.mL{
+	margin-left: 13px;
+}
+.mT{
+	margin-top: 13px;
+}
+.mTop{
+	margin-top: 14px;
+}
+.mLe{
+	margin-left: 14px;
+}
+.mRi{
+	margin-right: 14px;
+}
+.mLeft{
+	margin-left: 16px;
+}

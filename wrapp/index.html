@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/wra.css"/>
+	</head>
+	<body>
+		<div class="wrapp" id="wrapp">
+			<div class="slide" id="slide">
+				<ul>
+					<li style="background-image: url(img/1.jpg);"></li>
+					<li style="background-image: url(img/2.jpg);"></li>
+					<li style="background-image: url(img/3.jpg);"></li>
+					<li style="background-image: url(img/4.jpg);"></li>
+					<li style="background-image: url(img/5.jpg);"></li>
+					<li style="background-image: url(img/6.jpg);"></li>
+					<li style="background-image: url(img/7.jpg);"></li>
+					
+				</ul>
+			</div>
+			<div class="btn">
+				<a href="javascript:;" class="left1"></a>
+				<a href="javascript:;" class="right"></a>
+			</div>
+		</div>
+		<script src="js/base.js"></script>
+		<script>
+			var json = [
+				{
+					height:208,
+					top:40,
+					left:0,
+					opacity:30,
+					z:1
+				},{
+					height:230,
+					top:29,
+					left:80,
+					opacity:60,
+					z:2
+				},{
+					height:258,
+					top:15,
+					left:160,
+					opacity:80,
+					z:3
+				},{
+					height:286,
+					top:0,
+					left:240,
+					opacity:100,
+					z:4
+				},{
+					height:258,
+					top:15,
+					left:320,
+					opacity:80,
+					z:3
+				},{
+					height:230,
+					top:29,
+					left:400,
+					opacity:60,
+					z:2
+				},{
+					height:208,
+					top:40,
+					left:480,
+					opacity:30,
+					z:1
+				}
+			]
+			var slide = $("#slide");
+			var wrapp = $("#wrapp");
+			var lis = slide.children[0].children;
+			console.log(lis);
+			
+			var btn = $(".btn")[0];
+			var as = btn.children;
+			
+			
+			
+			var open = true;  //开关
+			// 遍历对象,为添加事件
+			for(k in as){
+				
+				as[k].onclick = function(){
+					if(this.className == "left1"){
+						// 左按钮
+						if(open){
+							open = false;
+							change(true);
+						}
+					}else{
+						if(open){
+							open = false;
+							change(false);
+						}
+					}
+				}
+			}
+			
+			
+			change();  //默认打开页面赋值
+			function change(flag){
+				if(flag){
+					
+					json.unshift(json.pop());
+				}else{
+					json.push(json.shift());
+				}
+				
+				
+				
+				// 每一个li添加动画效果
+				for(var i =0; i<lis.length; i++){
+					console.log("a")
+					animate(lis[i],{
+						"height":json[i].height,
+						"top":json[i].top,
+						"left":json[i].left,
+						"opacity":json[i].opacity,
+						"zIndex":json[i].z
+					},function(){
+						open = true;
+					
+					})
+				}
+			}
+		</script>
+	</body>
+</html>

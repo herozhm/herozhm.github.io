@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			ul{
+				list-style: none;
+			}
+			div{
+				width: 900px;
+				height: 420px;
+				margin: 0 auto;
+				border: 1px solid #FFA500;
+				overflow: hidden;
+			}
+			ul{
+				width: 1000px;
+			}
+			li{
+				width: 100px;
+				height: 420px;
+				font-size: 52px;
+				text-align: center;
+				line-height: 420px;
+				color: #fff;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul id="box">
+				<li style="width:600px;">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<script src="js/base.js"></script>
+		<script>
+			var box = $("#box");
+			var lis = box.children;
+			
+			for(var i =0 ; i <lis.length; i++){
+				lis[i].style.backgroundImage = "url(img/a" + (i+1) + ".png)";
+				lis[i].onmouseover = function(){
+					for(var j=0 ; j<lis.length; j++){
+						// lis[j].style.width = "100px";
+						animate(lis[j],{"width":100});
+					}
+					// this.style.width = "600px";
+					animate(this,{"width":600});
+				}
+				lis[i].onmouseout = ani;
+			}
+			ani();
+			function ani(){
+				for(var j=0;j<lis.length; j++){
+					animate(lis[j],{"width":900/4});
+				}
+			}
+		</script>
+	</body>
+</html>

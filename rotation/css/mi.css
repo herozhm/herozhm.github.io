@@ -1,0 +1,63 @@
+.wrapp{
+	height: 460px;
+	position: relative;
+	overflow: hidden;
+	top:20px;
+	
+}
+.wrapp ul{
+	width: 5000px;  /* 重点:给ul宽度 */
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.wrapp ul li{
+	float: left;
+}
+.wrapp ul li img{
+	height: 460px;
+	width: 1226px;
+}
+.wrapp .btn{
+	width: 1226px;
+	height: 69px;
+	position: absolute;
+	top:50%;
+	left: 0px;
+	margin-top: -35px;
+}
+.wrapp .btn .Left{
+	width: 41px;
+	height: 69px;
+	background: url(../img/icon-slides.png)no-repeat -83px 0px;
+	float: left;
+}
+.wrapp .btn .Left:hover{
+	background-position: 0px 0px;
+}
+.wrapp .btn .Right{
+	width: 41px;
+	height: 69px;
+	background: url(../img/icon-slides.png)no-repeat -124px 0px;
+	float: right;
+}
+.wrapp .btn .Right:hover{
+	background-position: -41px 0px;
+}
+.wrapp ol{
+	position: absolute;
+	right: 25px;
+	bottom: 30px;
+}
+.wrapp ol li.con{
+	background: orangered;
+}
+.wrapp ol li{
+	width: 8px;
+	height: 8px;
+	background: #757575;
+	border: 2px solid #bbffcc;
+	float: left;
+	margin-right: 5px;
+	border-radius: 50%;
+}

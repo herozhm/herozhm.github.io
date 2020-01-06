@@ -1,0 +1,363 @@
+.navbar {
+    .navbar-header {
+        a {
+            margin-left: 10px;
+            display: inline-block;
+            padding: 30px 50px;
+            background: url(../img/logo.png) no-repeat center center;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 15px;
+
+        }
+
+        .pic {
+            // width: 33px;
+            // height: 33px;
+            background: url(../img/phone.png) no-repeat center center;
+            background-size: cover;
+            float: left;
+            margin-left: 20px;
+        }
+
+        // .text {
+        //     color: rgb(18, 71, 52);
+        //     font-size: 24px;
+        //     font-weight: bold;
+        //     float: left;
+        //     margin-left: 10px;
+        // }
+
+    }
+
+    .collapse {
+        line-height: 60px;
+
+        ul {
+            padding-top: 5px;
+
+            li {
+                a {
+                    // font-size: 18px;
+                    color: #959595;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: rgba(40, 160, 117, 1);
+                    }
+
+                }
+
+                .active {
+                    color: rgba(40, 160, 117, 1);
+                }
+            }
+
+            .dropdown-menu {
+                // background: none;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+        }
+    }
+}
+
+// 轮播图
+.slide {
+    item {
+        img {
+            height: 700px;
+            width: 100%;
+        }
+    }
+}
+
+// 畅想一杯
+.cup {
+    text-align: center;
+    perspective: 900px;
+    transform-style: preserve-3d;
+
+    img {
+        display: inline-block;
+        width: 405px;
+        height: 136px;
+        margin: 50px 0;
+        cursor: pointer;
+        transition: all 1s;
+
+        // box-shadow: 1px 1px 1px #ccc;
+        &:hover {
+            transform: rotateY(360deg);
+        }
+    }
+
+    p {
+        line-height: 48px;
+        font-size: 16px;
+        color: rgb(149, 149, 149);
+    }
+}
+
+// 底部图片
+.picture {
+    padding: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+.foot {
+    // text-align: center;
+    padding: 30px 0;
+    overflow: hidden;
+    background: rgba(18, 71, 52, 1);
+
+    // padding:10px 0;
+    .left {
+        width: 50%;
+        float: left;
+
+        span {
+            color: #fff;
+            line-height: 1.9em;
+            display: inline-block;
+        }
+
+        .tit {
+            // font-size: 24px;
+
+        }
+
+        .small {
+            // font-size: 16px;
+            margin-left: 10px;
+        }
+
+        p {
+            // font-size: 14px;
+            color: #fff;
+            line-height: 1.7em;
+        }
+    }
+
+    .right {
+        width: 50%;
+        float: right;
+
+        .row {
+            .code {
+                display: inline-block;
+                width: 90px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .title {
+                span {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #fff;
+                    line-height: 1.8em;
+                }
+            }
+        }
+
+
+    }
+}
+
+// 媒体技术
+// 手机端：小于768px
+@media (max-width:768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-header {
+        button {
+            border: none;
+        }
+
+        .text {
+            color: rgb(18, 71, 52);
+            font-size: 14px;
+            font-weight: bold;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .pic {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .collapse{
+        ul{
+            .dropdown-menu{
+                text-align: center;
+            }
+        }
+    }
+    .foot {
+        .right {
+            .row {
+                text-align: center;
+
+                // margin: 0 auto;
+                .code {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+
+// 平板 ：大于768
+@media (min-width:768px) {
+    .navbar-header {
+        .text {
+            color: rgb(18, 71, 52);
+            font-size: 14px;
+            font-weight: bold;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .pic {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .collapse {
+        ul {
+            li {
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .foot {
+        .left {
+            .tit {
+                font-size: 14px;
+            }
+
+            .small {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+
+
+}
+
+// 普通pc :大于992
+@media (min-width:992px) {
+    .navbar-header {
+        .text {
+            color: rgb(18, 71, 52);
+            font-size: 20px;
+            font-weight: bold;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .pic {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .collapse {
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .foot {
+        .left {
+            .tit {
+                font-size: 18px;
+            }
+
+            .small {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+
+}
+
+// 超大pc： 大于1200
+@media (min-width:1200px) {
+    .navbar-header {
+        .text {
+            color: rgb(18, 71, 52);
+            font-size: 24px;
+            font-weight: bold;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .pic {
+            width: 33px;
+            height: 33px;
+        }
+    }
+
+    .collapse {
+        ul {
+            li {
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .foot {
+        .left {
+            .tit {
+                font-size: 24px;
+
+            }
+
+            .small {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #fff;
+                line-height: 1.7em;
+            }
+        }
+    }
+
+}

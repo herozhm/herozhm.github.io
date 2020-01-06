@@ -1,0 +1,58 @@
+.wrapp{
+	height: 460px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.wrapp ul{
+	width: 5000px;
+}
+.wrapp ul li{
+	float: left;
+}
+.wrapp ul li img{
+	width: 1226px;
+	height: 460px;
+}
+.wrapp .btn{
+	height: 69px;
+	width: 1226px;
+	/* border: 1px solid blue; */
+	margin-top: -35px;
+	top:50%;
+	left: 0px;
+	position: absolute;
+}
+.wrapp .btn .Left{
+	width: 41px;
+	height: 69px;
+	background: url(../img/icon-slides.png)no-repeat -83px 0px;
+	float: left;
+}
+.wrapp .btn .Left:hover{
+	background-position: 0px 0px;
+}
+.wrapp .btn .Right{
+	width:41px;
+	height:69px;
+	background: url(../img/icon-slides.png)no-repeat -124px 0px;
+	float: right;
+}
+.wrapp .btn .Right:hover{
+	background-position: -41px 0px;
+}
+.wrapp ol{
+	position: absolute;
+	right: 20px;
+	bottom: 25px;
+	
+}
+.wrapp ol li{
+	width: 8px;
+	height: 8px;
+	border: 2px solid #ccc;
+	background: #616161;
+	float: left;
+	margin-right: 5px;
+	border-radius: 50%;
+}

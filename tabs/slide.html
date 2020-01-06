@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        .slide,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .slide {
+            width: 1200px;
+            height: 500px;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slide .imgs {
+            width: 100%;
+            height: 500px;
+        }
+        
+        .slide .imgs li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 500px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .slide .imgs li.con {
+            position: static;
+            opacity: 1;
+        }
+        
+        .slide .imgs li img {
+            width: 100%;
+        }
+        
+        .slide .prev {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 48px;
+            height: 110px;
+            margin-top: -55px;
+            float: left;
+            background: rgba(0, 0, 0, 0.8) url("./img/preImg.png") no-repeat center center;
+        }
+        
+        .slide .next {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 48px;
+            height: 110px;
+            margin-top: -55px;
+            float: right;
+            background: rgba(0, 0, 0, 0.8) url("./img/nexImg.png") no-repeat center center;
+        }
+        
+        .slide #ols {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+        }
+        
+        .slide #ols li {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .slide #ols li.active {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <!-- 图片 -->
+        <ul class="imgs">
+            <li class="con"><img src="./img/lunbo1.jpg" alt=""></li>
+            <li><img src="./img/lunbo2.jpg" alt=""></li>
+            <li><img src="./img/lunbo3.jpg" alt=""></li>
+        </ul>
+
+        <!-- 按钮 -->
+        <div class="prev"></div>
+        <div class="next"></div>
+
+        <!-- 小圆点 -->
+        <ol id="ols">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(".slide #ols li").click(function() {
+            var i = $(this).index();
+
+            $(this)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+            $('ul.imgs li')
+                .eq(i)
+                .addClass("con")
+                .siblings()
+                .removeClass("con")
+        });
+
+        setInterval(function() {
+
+            index = index++ >= 2 ? 0 : index;
+            // console.log("aa");
+            $('ul.imgs li').eq(index).addClass("con").siblings().removeClass("con")
+            $(".slide #ols li")
+                .eq(index)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+
+        }, 1000);
+        var index = 0;
+        $(".slide .next").click(function() {
+            // index >= ols.length： 0 ? index++;
+            // debugger;
+            index = index++ >= 2 ? 0 : index;
+
+            $('ul.imgs li').eq(index).addClass("con").siblings().removeClass("con")
+
+            $(".slide #ols li")
+                .eq(index)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+
+        })
+
+        $(".slide .prev").click(function() {
+            // index--;
+            index = index-- <= 0 ? 2 : index;
+            $('ul.imgs li').eq(index).addClass("con").siblings().removeClass("con")
+
+            $(".slide #ols li")
+                .eq(index)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+        })
+    </script>
+</body>
+
+</html>

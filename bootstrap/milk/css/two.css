@@ -1,0 +1,104 @@
+.company {
+  height: 611px;
+  background: url(../img/home5.jpg) no-repeat center center;
+}
+.company .desc h2 {
+  color: #666;
+  font-weight: bold;
+  line-height: 36px;
+}
+.company .desc span {
+  display: inline-block;
+  width: 36px;
+  border: 1px solid #666;
+}
+.company .desc .con {
+  padding-top: 10px;
+}
+.company .desc .con .row p {
+  color: #666;
+  line-height: 36px;
+  font-size: 16px;
+}
+.sign h1 {
+  text-align: center;
+  color: #959595;
+  margin: 80px 0;
+}
+.sign .top {
+  margin-bottom: 50px;
+}
+.sign .top .bg {
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.sign .top .bg img {
+  cursor: pointer;
+  transition: all 1s;
+  width: 100%;
+}
+.sign .top .bg img:hover {
+  transform: rotateY(180deg);
+}
+.sign .top .bg h3 {
+  color: #959595;
+}
+.sign .top .bg span {
+  display: inline-block;
+  width: 36px;
+  margin: 10px 0;
+  border: 1px solid #959595;
+}
+.sign .top .bg p {
+  line-height: 36px;
+  font-size: 16px;
+  color: #959595;
+}
+@media (max-width: 768px) {
+  .company .desc {
+    margin-top: 10%;
+  }
+  .company .desc h2 {
+    font-size: 18px;
+  }
+  .sign h1 {
+    font-size: 18px;
+  }
+  .sign .top h3 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .company .desc {
+    margin-left: 40%;
+    margin-top: 10%;
+  }
+  .company .desc h2 {
+    font-size: 20px;
+  }
+  .company .desc p {
+    padding-right: 100px;
+  }
+  .sign h1 {
+    font-size: 20px;
+  }
+  .sign .top h3 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .sign h1 {
+    font-size: 25px;
+  }
+  .sign .top h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .sign h1 {
+    font-size: 30px;
+  }
+  .sign .top h3 {
+    font-size: 24px;
+  }
+}

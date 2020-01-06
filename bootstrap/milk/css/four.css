@@ -1,0 +1,24 @@
+.wrapp .wrapp-bg {
+  height: 360px;
+  width: 100%;
+  background: url(../img/home3.png) no-repeat center center;
+  background-attachment: fixed;
+}
+.join .join-one {
+  padding: 0;
+}
+.join .join-one img {
+  width: 100%;
+}
+.join .join-two {
+  padding: 0;
+}
+.join .join-two img {
+  width: 100%;
+}
+.join .join-three {
+  padding: 0;
+}
+.join .join-three img {
+  width: 100%;
+}

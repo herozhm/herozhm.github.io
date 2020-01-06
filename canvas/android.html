@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>机器人</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        #canvas {
+            margin: 50px;
+            background: #bbb;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        /** @type {HTMLCanvasElement} */
+
+        var canvas = document.querySelector("#canvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "green";
+
+        // 头部
+        ctx.beginPath();
+        ctx.arc(280, 180, 100, 0, Math.PI, true);
+        ctx.closePath();
+        ctx.strokeStyle = 'green';
+        ctx.stroke();
+        ctx.fillStyle = 'green';
+        ctx.fill()
+
+        // 眼睛
+        // 左眼
+        ctx.beginPath();
+        ctx.arc(230, 140, 10, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.strokeStyle = 'white';
+        ctx.stroke();
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+        // 右眼
+        ctx.beginPath();
+        ctx.arc(330, 140, 10, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.strokeStyle = 'white';
+        ctx.stroke();
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+        // 头须子
+        // 左
+        ctx.beginPath();
+        ctx.moveTo(200, 60);
+        ctx.lineTo(260, 120);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'green';
+        ctx.stroke();
+
+        // 右
+        ctx.beginPath();
+        ctx.moveTo(370, 60);
+        ctx.lineTo(300, 120);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'green';
+        ctx.stroke();
+
+
+
+        // 左右手
+        // 左
+        ctx.beginPath();
+        ctx.fillStyle = "green"
+        ctx.lineWidth = 40;
+        ctx.lineCap = "round";
+        ctx.moveTo(140, 200);
+        ctx.lineTo(140, 350);
+        ctx.stroke();
+        ctx.fill();
+
+
+        // 右
+        ctx.beginPath();
+        ctx.fillStyle = "green"
+        ctx.lineWidth = 40;
+        ctx.lineCap = "round";
+        ctx.moveTo(420, 200);
+        ctx.lineTo(420, 350);
+        ctx.stroke();
+        ctx.fill();
+
+        // 身体
+        ctx.fillRect(180, 200, 200, 200);
+
+        ctx.beginPath();
+        ctx.fillStyle = "green"
+        ctx.lineWidth = 40;
+        ctx.lineCap = "round";
+        ctx.moveTo(200, 400);
+        ctx.lineTo(360, 400);
+        ctx.stroke();
+        ctx.fill();
+
+        // 脚
+        // ctx.fillRect(220, 400, 40, 100);
+        // ctx.fillRect(300, 400, 40, 100);
+
+        ctx.beginPath();
+        ctx.fillStyle = "green"
+        ctx.lineWidth = 40;
+        ctx.lineCap = "round";
+        ctx.moveTo(240, 400);
+        ctx.lineTo(240, 500);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "green"
+        ctx.lineWidth = 40;
+        ctx.lineCap = "round";
+        ctx.moveTo(320, 400);
+        ctx.lineTo(320, 500);
+        ctx.stroke();
+        ctx.fill();
+    </script>
+
+</body>
+
+</html>

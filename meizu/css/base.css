@@ -1,0 +1,122 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,a,i,em,b,strong,img,input,br{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #F4F4F4;
+}
+br{
+	height: 0px;
+	line-height: 0px;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+img{
+	width:100%;
+	height: auto;
+}
+
+dt{
+	font-size: 14px;
+}
+dd{
+	font-size: 12px;
+}
+
+/* 公共样式 */
+.container {
+	width: 1240px;
+	margin: 0 auto;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+input {
+	background: none;
+	outline: none;  /* 处理输入框蓝色边 */
+	padding: 0px;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+	/* 为了兼容ie浏览器 */
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+h1{
+	font-size: 22px;
+}
+h2{
+	font-size: 20px;
+}
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+h6{
+	font-size: 12px;
+}
+.m-left{
+	margin-left: 10px;
+}
+.m-bottom{
+	margin-bottom: 10px;
+}
+.m-right{
+	margin-right: 10px;
+}
+.m-top{
+	margin-top: 10px;
+}
+.mt{
+	margin-top: 9px;
+}
+.ml{
+	margin-left: 9px;
+}
+.mr{
+	margin-right: 9px;
+}
+.mle{
+	margin-left: 15px;
+}
+.mto{
+	margin-top: 15px;
+}
+.mbt{
+	margin-bottom: 15px;
+}
+.fnew{
+	background:#ff64a6;
+}
+.fold{
+	background:#56bdf9;
+}

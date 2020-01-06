@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        .stage,
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            background: rgba(102, 218, 208, 0.2);
+        }
+        
+        .stage {
+            width: 900px;
+            height: 420px;
+            /* background: orange; */
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        
+        .stage #uls {
+            width: 120%;
+            height: 420px;
+        }
+        
+        .stage #uls li {
+            float: left;
+            width: 100px;
+            height: 420px;
+            position: relative;
+            /* transition: all 0.3s; */
+        }
+        
+        .stage #uls li .text {
+            width: 100px;
+            height: 420px;
+            float: left;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            font-size: 14px;
+            line-height: 100px;
+            writing-mode: vertical-rl;
+            text-indent: 2em;
+            /* 文本垂直排列 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <ul id="uls">
+            <li>
+                <img src="./img/a11.png" alt="">
+                <div class="text">
+                    莫愁前路无知己，天下谁人不识君。
+                </div>
+            </li>
+            <li>
+                <img src="./img/a22.png" alt="">
+                <div class="text">
+                    晓看天色暮看云。。。。。。
+                </div>
+            </li>
+            <li>
+                <img src="./img/a33.png" alt="">
+                <div class="text">
+                    闲看庭前花开花落，，，
+                </div>
+            </li>
+            <li>
+                <img src="./img/a44.png" alt="">
+                <div class="text">
+                    漫随天外云卷云舒。。。
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(".stage #uls li").mouseenter(function() {
+            $(this)
+                .stop()
+                .animate({
+                    "width": "600px"
+                }, 500)
+                .siblings()
+                .stop()
+                .animate({
+                    "width": "100px"
+                }, 500)
+        }).mouseleave(function() {
+            $(".stage #uls li")
+                .stop()
+                .animate({
+                    "width": "100px"
+                }, 500)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+.row .ca {
+    top: 0;
+    bottom: 0;
+}
+
+.row h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 10em;
+}
+
+.row span {
+    font-size: 16px;
+    color: #00A862;
+}
+
+.row .text-muted {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+
+.row .login {
+    font-size: 16px;
+    color: rgb(0, 168, 56);
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 35px;
+    border: 1px solid #00A862;
+}
+
+.row .login:hover {
+    text-decoration: none;
+}
+
+.row .bg {
+    background: #ccc;
+}
+
+.slides {
+    padding: 0;
+}
+
+
+/* pic */
+
+ul.row {
+    margin: 24px;
+    padding: 0;
+    /* background: #ccc; */
+}
+
+ul.row li {
+    list-style: none;
+    padding: 15px;
+}
+
+
+/* club */
+
+.club h2 {
+    font-size: 22px;
+    line-height: 2em;
+}
+
+.club p {
+    font-size: 16px;
+    color: #333;
+    line-height: 2em;
+}
+
+.club p span {
+    color: #C2A661;
+}
+
+.club .zc {
+    font-size: 16px;
+    color: rgb(0, 168, 56);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 50px;
+    border: 1px solid #00A862;
+}
+
+.club .zc:hover {
+    text-decoration: none;
+}
+
+
+/* star */
+
+.bgc {
+    text-align: center;
+}
+
+.star h2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+.star h3 {
+    font-size: 16px;
+    font-weight: 200;
+    color: #333;
+    line-height: 2em;
+}
+
+.star ul li div {
+    background: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.vip {}
+
+.vip h5 {
+    font-size: 16px;
+    line-height: 2em;
+    font-weight: 800;
+}
+
+.vip p {
+    font-size: 14px;
+    color: #333;
+    line-height: 0.5em;
+}
+
+.vip a {
+    color: #C2A661;
+    font-size: 12px;
+    line-height: 5em;
+    display: block;
+}
+
+.vip a:hover {
+    text-decoration: none;
+}
+
+.vip img {
+    top: -36px;
+    left: 21px;
+    height: 72px;
+}
+
+.foot h2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+.foot h3 {
+    font-size: 16px;
+    font-weight: 200;
+    color: #333;
+    line-height: 2em;
+}
+
+.foot h2 span {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 22px;
+    color: #000;
+    line-height: 2em;
+}
+
+.foot ul li .coffee div {
+    padding: 4px 12px;
+    background: #C2A661;
+    color: #fff;
+    font-size: 14px;
+    top: 20px;
+    left: 15px;
+}
+
+.foot ul li .coffee {
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.foot ul li .coffee p {
+    font-size: 16px;
+    color: #333;
+    line-height: 2em;
+    background: #fff;
+    cursor: pointer;
+}

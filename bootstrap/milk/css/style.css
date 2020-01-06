@@ -1,0 +1,211 @@
+.navbar .navbar-header a {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 30px 50px;
+  background: url(../img/logo.png) no-repeat center center;
+}
+.navbar .navbar-header span {
+  display: inline-block;
+  margin-top: 15px;
+}
+.navbar .navbar-header .pic {
+  background: url(../img/phone.png) no-repeat center center;
+  background-size: cover;
+  float: left;
+  margin-left: 20px;
+}
+.navbar .collapse {
+  line-height: 60px;
+}
+.navbar .collapse ul {
+  padding-top: 5px;
+}
+.navbar .collapse ul li a {
+  color: #959595;
+  transition: all 0.3s;
+}
+.navbar .collapse ul li a:hover {
+  color: #28a075;
+}
+.navbar .collapse ul li .active {
+  color: #28a075;
+}
+.navbar .collapse ul .dropdown-menu {
+  border-radius: 5px;
+  padding: 10px;
+}
+.slide item img {
+  height: 700px;
+  width: 100%;
+}
+.cup {
+  text-align: center;
+  perspective: 900px;
+  transform-style: preserve-3d;
+}
+.cup img {
+  display: inline-block;
+  width: 405px;
+  height: 136px;
+  margin: 50px 0;
+  cursor: pointer;
+  transition: all 1s;
+}
+.cup img:hover {
+  transform: rotateY(360deg);
+}
+.cup p {
+  line-height: 48px;
+  font-size: 16px;
+  color: #959595;
+}
+.picture {
+  padding: 0;
+}
+.picture img {
+  width: 100%;
+}
+.foot {
+  padding: 30px 0;
+  overflow: hidden;
+  background: #124734;
+}
+.foot .left {
+  width: 50%;
+  float: left;
+}
+.foot .left span {
+  color: #fff;
+  line-height: 1.9em;
+  display: inline-block;
+}
+.foot .left .small {
+  margin-left: 10px;
+}
+.foot .left p {
+  color: #fff;
+  line-height: 1.7em;
+}
+.foot .right {
+  width: 50%;
+  float: right;
+}
+.foot .right .row .code {
+  display: inline-block;
+  width: 90px;
+}
+.foot .right .row .code img {
+  width: 100%;
+}
+.foot .right .row .title span {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.8em;
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-header button {
+    border: none;
+  }
+  .navbar-header .text {
+    color: #124734;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+  }
+  .navbar-header .pic {
+    width: 20px;
+    height: 20px;
+  }
+  .collapse ul .dropdown-menu {
+    text-align: center;
+  }
+  .foot .right .row {
+    text-align: center;
+  }
+  .foot .right .row .code {
+    width: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-header .text {
+    color: #124734;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+  }
+  .navbar-header .pic {
+    width: 20px;
+    height: 20px;
+  }
+  .collapse ul li a {
+    font-size: 10px;
+  }
+  .foot .left .tit {
+    font-size: 14px;
+  }
+  .foot .left .small {
+    font-size: 14px;
+  }
+  .foot .left p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-header .text {
+    color: #124734;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+  }
+  .navbar-header .pic {
+    width: 25px;
+    height: 25px;
+  }
+  .collapse ul li a {
+    font-size: 14px;
+  }
+  .foot .left .tit {
+    font-size: 18px;
+  }
+  .foot .left .small {
+    font-size: 16px;
+  }
+  .foot .left p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-header .text {
+    color: #124734;
+    font-size: 24px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+  }
+  .navbar-header .pic {
+    width: 33px;
+    height: 33px;
+  }
+  .collapse ul li a {
+    font-size: 18px;
+  }
+  .foot .left .tit {
+    font-size: 24px;
+  }
+  .foot .left .small {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .foot .left p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7em;
+  }
+}

@@ -1,0 +1,159 @@
+.company {
+    height: 611px;
+    background: url(../img/home5.jpg) no-repeat center center;
+
+    .desc {
+        // margin-left: 40%;
+        // margin-top: 10%;
+
+        h2 {
+            color: #666;
+            // font-size: 20px;
+            font-weight: bold;
+            line-height: 36px;
+        }
+
+        span {
+            display: inline-block;
+            width: 36px;
+            border: 1px solid #666;
+        }
+
+        .con {
+            // padding-right: 100px;
+            padding-top: 10px;
+
+            .row {
+                p {
+                    color: #666;
+                    line-height: 36px;
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+// 竞争力
+.sign {
+    h1 {
+        text-align: center;
+        // font-size: 30px;
+        color: rgb(149, 149, 149);
+        margin: 80px 0;
+    }
+
+    .top {
+        margin-bottom: 50px;
+
+        .bg {
+            perspective: 500px;
+            transform-style: preserve-3d;
+
+            img {
+                cursor: pointer;
+                transition: all 1s;
+                width: 100%;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            h3 {
+                color: rgb(149, 149, 149);
+                // font-size: 24px;
+            }
+
+            span {
+                display: inline-block;
+                width: 36px;
+                margin: 10px 0;
+                border: 1px solid rgb(149, 149, 149);
+            }
+
+            p {
+                line-height: 36px;
+                font-size: 16px;
+                color: rgb(149, 149, 149);
+            }
+        }
+
+    }
+}
+
+// 媒体技术
+@media (max-width:768px) {
+    .company{
+        .desc{
+            h2{
+                font-size: 18px;
+            }
+            margin-top: 10%;
+        }
+    }
+    .sign{
+        h1{
+            font-size: 18px;
+        }
+        .top{
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .company{
+        .desc{
+            h2{
+                font-size: 20px;
+            }
+            margin-left: 40%;
+            margin-top: 10%;
+            p{
+                padding-right: 100px;
+            }
+        }
+    }
+    .sign{
+        h1{
+            font-size: 20px;
+        }
+        .top{
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .sign{
+        h1{
+            font-size: 25px;
+        }
+        .top{
+            h3{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .sign{
+        h1{
+            font-size: 30px;
+        }
+        .top{
+            h3{
+                font-size: 24px;
+            }
+        }
+    }
+}

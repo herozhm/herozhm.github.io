@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+}
+.stage {
+  height: 100vh;
+  width: 100%;
+  background: url(../img/323987.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+.stage .content {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.stage .content .small {
+  transform-style: preserve-3d;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  animation: run 5s linear infinite;
+}
+.stage .content .small div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.stage .content .small div:nth-child(1) {
+  background: url(../img/01.png) no-repeat center center;
+  transform: rotateX(90deg) translateZ(50px);
+}
+.stage .content .small div:nth-child(2) {
+  background: url(../img/02.png) no-repeat center center;
+  transform: rotateX(90deg) translateZ(-50px);
+}
+.stage .content .small div:nth-child(3) {
+  background: url(../img/03.png) no-repeat center center;
+  transform: rotateY(90deg) translateZ(50px);
+}
+.stage .content .small div:nth-child(4) {
+  background: url(../img/04.png) no-repeat center center;
+  transform: rotateY(90deg) translateZ(-50px);
+}
+.stage .content .small div:nth-child(5) {
+  background: url(../img/05.png) no-repeat center center;
+  transform: translateZ(50px);
+}
+.stage .content .small div:nth-child(6) {
+  background: url(../img/06.png) no-repeat center center;
+  transform: translateZ(-50px);
+}
+.stage .content .big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  animation: runb 5s linear infinite;
+  transform-style: preserve-3d;
+}
+.stage .content .big div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #d823ab;
+  transition: all 1s ease;
+}
+.stage .content .big div:nth-child(1) {
+  transform: rotateX(90deg) translateZ(100px);
+  background: url(../img/01.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content .big div:nth-child(2) {
+  transform: rotateX(90deg) translateZ(-100px);
+  background: url(../img/02.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content .big div:nth-child(3) {
+  transform: rotateY(90deg) translateZ(100px);
+  background: url(../img/03.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content .big div:nth-child(4) {
+  transform: rotateY(90deg) translateZ(-100px);
+  background: url(../img/04.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content .big div:nth-child(5) {
+  transform: translateZ(100px);
+  background: url(../img/05.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content .big div:nth-child(6) {
+  transform: translateZ(-100px);
+  background: url(../img/06.png) no-repeat center center;
+  background-size: cover;
+}
+.stage .content:hover .big div:nth-child(1) {
+  transform: rotateX(90deg) translateZ(240px);
+}
+.stage .content:hover .big div:nth-child(2) {
+  transform: rotateX(90deg) translateZ(-240px);
+}
+.stage .content:hover .big div:nth-child(3) {
+  transform: rotateY(90deg) translateZ(240px);
+}
+.stage .content:hover .big div:nth-child(4) {
+  transform: rotateY(90deg) translateZ(-240px);
+}
+.stage .content:hover .big div:nth-child(5) {
+  transform: translateZ(240px);
+}
+.stage .content:hover .big div:nth-child(6) {
+  transform: translateZ(-240px);
+}
+@keyframes run {
+  0% {
+    transform: rotateX(13deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(13deg) rotateY(360deg);
+  }
+}
+@keyframes runb {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(360deg);
+  }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sty01.css"/>
+	</head>
+	<body>
+		
+		<!-- 头部顶部导航  ctrl+/-->
+		<div class="header_top">
+			<div class="container clearfix">
+				<div class="fl">
+					 <a href="#">小米商城</a><span>|</span>
+					 <a href="#">MIUI </a><span>|</span>
+					 <a href="#">loT </a><span>|</span>
+					 <a href="#">云服务 </a><span>|</span>
+					 <a href="#">金融 </a><span>|</span>
+					 <a href="#">有品 </a><span>|</span>
+					 <a href="#">小爱开放平台 </a><span>|</span>
+					 <a href="#">企业团购 </a><span>|</span>
+					 <a href="#">资质证照 </a><span>|</span>
+					 <a href="#">协议规则 </a><span>|</span>
+					 <a href="#">下载app </a><span>|</span>
+					 <a href="#">Select Region </a>	 
+				</div>
+					 <div class="fr">
+					   <a href="#">登录</a><span>|</span>
+					   <a href="#">注册</a><span>|</span>
+					   <a href="#">消息通知</a>
+					   
+					   <div class="car">
+						 <i>购物车（0）</i>
+					   </div>
+			        </div>
+				   
+			</div>
+		</div>
+		<!-- 头部顶部导航  end-->
+		
+		<!-- 导航条 -->
+		<div class="header container clearfix">
+			<div class="logo fl">
+				<a href="#" class="fl">
+				&nbsp;
+				&nbsp;
+				</a>
+			</div>
+			<div id="header-nav" class="fl">
+				<ul class="clearfix ">
+					<li><a href="#">小米手机</a></li>
+					<li><a href="#">Redmi红米</a></li>
+					<li><a href="#">电视</a></li>
+					<li><a href="#">笔记本</a></li>
+					<li><a href="#">家电</a></li>
+					<li><a href="#">路由器</a></li>
+					<li><a href="#">智能硬件</a></li>
+					<li><a href="#">服务</a></li>
+					<li><a href="#">社区</a></li>
+				</ul>
+			</div>
+			
+			<!-- 搜索框 -->
+			<div id="search" class=" clearfix" >
+				<input type="text" class="text" >
+				<div class="btn">&nbsp;</div>
+				<div class="word">
+					<a href="#">小米9</a>
+					<a href="#">小米9 SE</a>
+				</div>
+				<div class="searchList">
+					<a  href="">小米9</a>
+					<a  href="">Redmi K20 pro</a>
+					<a  href="">Redmi K20</a>
+					<a  href="">Redmi Note 7 Pro</a>
+					<a  href="">Redmi note 7</a>
+					<a  href="">小米电视4c</a>
+					<a  href="">电视32英寸</a>
+					<a  href="">笔记本pro</a>
+					<a  href="">小爱音箱</a>
+					<a  href="">净水器</a>
+				</div>
+			</div>
+			<!-- 搜索框 end-->
+		</div>
+		
+		
+		<!-- 详情页 -->
+		
+		<div class="hd">
+			<div class="container">
+				<div class="hd-top clearfix">
+					<h2 class="fl">Redmi K20 Pro 
+					<span>|</span>
+					<i>Redmi K20</i>
+					</h2>
+					<ul class="fr">
+						<li><a href="">概述</a><span>|</span></li>
+						<li><a href="">参数</a><span>|</span></li>
+						<li><a href="">F码通道</a><span>|</span></li>
+						<li><a href="">用户评价</a></li>
+					</ul>
+				</div>
+				
+				<div class="bd-bottom clearfix">
+					<div class="leF" id="scroll">
+						<img src="img/redmi.jpg" >
+					</div>
+					
+					
+					
+<!-- 图片固定定位 -->	
+<script src="js/base.js" ></script>
+<script type="text/javascript">
+	window.onscroll = function(){
+		console.log(scroll().top);
+		// 到达高度出发 300px改变状态
+		if(scroll().top >= 240){
+			console.log("修改值");
+			$("#scroll").style.position = "fixed";
+			$("#scroll").style.top= "50%";
+			$("#scroll").style.left= "50%";
+			$("#scroll").style.marginTop= "-280px";
+			$("#scroll").style.marginLeft= "-613px";
+			 if(scroll().top >= 1200){
+				$("#scroll").style.position = "";
+				$("#scroll").style.top= "0px";
+				$("#scroll").style.marginTop= "1200px";
+			}
+		}else if(scroll().top < 240){
+			$("#scroll").style.position = "";
+			$("#scroll").style.top= "0px";
+			$("#scroll").style.marginTop= "";
+		}
+	}
+</script>
+					<!-- 右边简述 -->
+					<div class="riG fl">
+						<h1>Redmi K20 Pro </h1>
+						<p class="des">
+				<b>「全版本赠Redmi AirDots 真无线蓝牙耳机。购机           			享花呗分期6期免息，低至14元起/天！可选加<br>
+				27W快充套装」</b>
+				骁龙855旗舰处理器 / 索尼4800万超广角三摄 / 前置2000万升降式相机 / <br>
+				6.39"AMOLED全面屏 / 4000mAh超长续航 / 8层石墨立体散热 / 第七代屏下指纹解锁 / 多功能NFC
+							
+						</p>
+						<p class="font">小米自营</p>
+						<span class="pri">2999元</span>
+						
+						<!-- 赠品 -->
+						<div class="zp clearfix">
+							<dl class="fl">
+								<dt>赠品</dt>
+								<dt>赠品</dt>
+							</dl>
+							
+							<dl class="fl two">
+								<dd>赠Redmi AirDots真无线蓝牙耳机</dd>
+								<dd>赠米粉卡</dd>
+							</dl>	
+						</div>
+						<!-- 赠品end -->
+						
+						<!-- 地址 -->
+						<div class="add">
+							<i>&nbsp;</i>
+							
+							<span class="sd">广东</span>
+							<span class="sd">广州市</span> 
+							<span class="sd">荔湾区</span> 
+							<span class="sd">白鹤洞街道</span>
+							<span class="sd end">修改</span>
+							<p>有现货</p>		
+						</div>
+						
+						<!-- 地址end -->
+						
+						<!-- 选择版本 -->
+						<div class="choose">
+							<h2>选择版本</h2>
+							<ul class="clearfix">
+								<li class="fl co">
+									<a href="">
+										<span class="sp1">8GB+256GB</span>
+										<span class="sp2">2999元</span>
+									</a>
+								</li>
+								<li class="fl ">
+									<a href="">
+										<span class="sp1 sp3">8GB+256GB</span>
+										<span class="sp2 sp4">2999元</span>
+									</a>
+								</li>
+								
+								<li class="fl m-top">
+									<a href="">
+										<span class="sp1 sp3">8GB+256GB</span>
+										<span class="sp2 sp4">2999元</span>
+									</a>
+								</li>
+								
+								<li class="fl m-top">
+									<a href="">
+										<span class="sp1 sp3">8GB+256GB</span>
+										<span class="sp2 sp4">2999元</span>
+									</a>
+								</li>
+								
+								
+								
+							</ul>
+						</div>
+						
+						
+						<!-- 选择版本end -->
+						
+						
+						<!-- 选择颜色 -->
+						
+						<div class="choose">
+							<h2>选择颜色</h2>
+							<ul class="clearfix">
+								<li class="fl co">
+									<a href="">
+									
+									<img src="img/redmi.jpg">	
+										<span class="fr sp5">冰川蓝</span>
+										
+									</a>
+								</li>
+								
+								<li class="fl ">
+									<a href="">
+									
+									<img src="img/red.jpg">	
+										<span class="fr sp5">碳纤黑</span>
+										
+									</a>
+								</li>
+								
+								<li class="fl  m-top">
+									<a href="">
+									
+									<img src="img/red.jpg">	
+										<span class="fr sp5">火焰红</span>
+										
+									</a>
+								</li>
+								
+								
+								
+								
+							</ul>
+						</div>
+						
+						<!-- 选择颜色 end-->
+						
+						
+						
+						<!-- 选择套餐 -->
+						<div class="choose">
+							<h2>选择套餐</h2>
+							<ul class="clearfix">
+								<li class="fl co">
+									<a href="">
+										<strong class="fr sp6">标配</strong>	
+									</a>
+								</li>
+								
+								<li class="fl ">
+									<a href="">
+									
+									
+										<strong class="fr sp6 sp7">27W 快充套餐</strong>
+										
+									</a>
+								</li>
+									
+							</ul>
+						</div>
+						
+						
+						
+						<!-- 选择套餐 end-->
+						
+						
+						
+						
+						<!-- 选择小米提供的意外保护 -->
+						<div class="fontup clearfix">
+							
+						<h2 class="fl">选择小米提供的意外保护</h2>
+						<a class="fr" href="">了解意外保护&gt;</a>
+						</div>
+						<div class="choose-bx clearfix">
+							<ul class="clearfix ">
+								<li class="fl">
+									<i>&nbsp;</i>
+									<img src="img/se.png" >
+									<div class="right-fon fl">
+										<h5>
+											意外保障服务
+										</h5>
+										<p class="bt">
+								手机意外碎屏/进水/碾压等损坏
+											
+										</p>
+										<p class="tb">
+								<em>&nbsp;</em>
+								<span class="pa1">&nbsp;我已阅读&nbsp;</span>
+								<span class="pa2">&nbsp;服务条款&nbsp;</span>
+								<span class="pa3">|</span>
+								<span class="pa4">&nbsp;常见问题&nbsp;</span>
+								
+										</p>
+									</div>
+								<span class="pa5 fr">249元</span>
+									
+								</li>
+								
+								
+								
+								
+							</ul>
+								<!-- 2 -->
+								<ul class="clearfix ">
+									<li class="fl">
+										<i>&nbsp;</i>
+										<img src="img/se.png" >
+										<div class="right-fon fl">
+											<h5>
+												碎屏保障服务
+											</h5>
+											<p class="bt">
+									手机意外碎屏
+												
+											</p>
+											<p class="tb">
+									<em>&nbsp;</em>
+									<span class="pa1">&nbsp;我已阅读&nbsp;</span>
+									<span class="pa2">&nbsp;服务条款&nbsp;</span>
+									<span class="pa3">|</span>
+									<span class="pa4">&nbsp;常见问题&nbsp;</span>
+									
+											</p>
+										</div>
+									<span class="pa5 fr">129元</span>
+										
+									</li>
+									
+									<!-- 2 -->
+									
+									
+									
+								</ul>
+							
+							
+						</div>
+						
+						<!-- 选择小米提供的意外保护end -->
+						
+						<!-- 选择小米提供的延年保修 -->
+						<div class="fontup clearfix">
+							
+						<h2 class="fl">选择小米提供的延年保修</h2>
+						<a class="fr" href="">了解延长保修&gt;</a>
+						</div>
+						<div class="choose-bx clearfix">
+							<ul class="clearfix">
+								<li>
+									<i>&nbsp;</i>
+									<img src="img/se.png" >
+									<div class="right-fon fl">
+										<h5>
+											延年保修服务
+										</h5>
+										<p class="bt">
+								厂保延一年，性能故障免费维修
+											
+										</p>
+										<p class="tb">
+								<em>&nbsp;</em>
+								<span class="pa1">&nbsp;我已阅读&nbsp;</span>
+								<span class="pa2">&nbsp;服务条款&nbsp;</span>
+								<span class="pa3">|</span>
+								<span class="pa4">&nbsp;常见问题&nbsp;</span>
+								
+										</p>
+									</div>
+								<span class="pa5 fr">69元</span>
+									
+								</li>
+							</ul>
+						</div>
+						
+						<!-- 选择小米提供的延年保修 end-->
+						
+						<!-- 价格总计 -->
+						<dl class="proList clearfix">
+							<dt>Redmi K20 Pro 8GB+256GB 冰川蓝 <span class="pce fr">2999元</span></dt>
+							<dd>总计2999元</dd>
+						</dl>
+						
+						<!-- 价格总计end -->
+						
+						<!-- 加入购物车 -->
+						<div class="shopcar clearfix">
+							<a class="fl sho" href="">加入购物车</a>
+							
+							<a class="fl m-left shopt" href="">
+								<i>喜欢</i>
+							</a>
+							
+						</div>
+						<!-- 加入购物车 end-->
+						
+						<!-- 详情底部 -->
+						<div class="policy clearfix">
+							<a class="fl" href="">
+								<span>小米自营</span>
+							</a>
+							<a class="fl m-left" href="">
+								<span>小米发货</span>
+							</a>
+							<a class="fl m-left" href="">
+								<span>7天无理由退货</span>
+							</a>
+							<a class="fl m-left" href="">
+								<span>运费说明</span>
+							</a>
+						</div>
+						<!-- 详情底部 end-->
+						
+					</div>
+					
+				</div>
+				
+			</div>
+				<!-- 价格说明 -->
+				<div class="said clearfix">
+					<div class="container">	
+					<h4 class="fl">价格说明</h4>
+					<div class="img-bt">
+						<img src="img/price.jpeg" >
+					</div>
+					</div>
+					
+				</div>
+				
+				
+				<!-- 价格说明 end-->
+		</div>
+		
+		
+		<!-- 详情页 end-->
+		
+		
+			<!-- 底部 -->
+		<div class="foot">
+			<div class="footSer container">
+				<ul class="clearfix">
+					<li><a class="lin1" href="">预约维修服务</a></li>
+					<li><a class="lin2" href="">7天无理由退货</a></li>
+					<li><a class="lin3" href="">15天免费换货</a></li>
+					<li><a class="lin4" href="">满150包邮</a></li>
+					<li><a class="lin5" href="">520余家售后网点</a></li>
+				</ul>
+			</div>
+			<div class="footLi clearfix container" >
+				<div class="fl">
+					<dl class="fl">
+						<dt>帮助中心</dt>
+						<dd>账户管理</dd>
+						<dd>购物指南</dd>
+						<dd>订单操作</dd>
+					</dl>
+					
+					<!-- 2 -->
+					<dl class="fl">
+						<dt>服务支持</dt>
+						<dd>售后政策</dd>
+						<dd>自助服务</dd>
+						<dd>相关下载</dd>
+						
+					</dl>
+					<!-- 3 -->
+					<dl class="fl">
+						<dt>线下门店</dt>
+						<dd>小米之家</dd>
+						<dd>服务网点</dd>
+						<dd>授权体验店</dd>
+						
+					</dl>
+					<!-- 4 -->
+					<dl class="fl">
+						<dt>关于小米</dt>
+						<dd>了解小米</dd>
+						<dd>加入小米</dd>
+						<dd>投资者关系</dd>
+						
+					</dl>
+					<!-- 5 -->
+					<dl class="fl">
+						<dt>关注我们</dt>
+						<dd>新浪微博</dd>
+						<dd>官方微信</dd>
+						<dd>联系我们</dd>
+						
+					</dl>
+					<!-- 6 -->
+					<dl class="fl">
+						<dt>特色服务</dt>
+						<dd>F码通道</dd>
+						<dd>礼物码</dd>
+						<dd>防伪查询</dd>
+						
+					</dl>
+					
+				</div>
+				<div class="fr">
+					<h2>
+						400-100-5678
+					</h2>
+					<p>
+						周一至周日 8:00-18:00<br>
+						（仅收市话费）
+					</p>
+					<button type="button">联系客服</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footIn">
+			<div class="container">
+				<div class="mbox">
+					<div class="mi-logo"></div>
+					<div class="main clearfix">
+						<a href="">小米商城</a><span>|</span>
+						<a href="">MIUI</a><span>|</span>
+						<a href="">米家</a><span>|</span>
+						<a href="">米脚</a><span>|</span>
+						<a href="">多看</a><span>|</span>
+						<a href="">游戏</a><span>|</span>
+						<a href="">路由器</a><span>|</span>
+						<a href="">米粉卡</a><span>|</span>
+						<a href="">政企服务</a><span>|</span>
+						<a href="">小米天猫店</a><span>|</span>
+						<a href="">隐私政策</a><span>|</span>
+						<a href="">商城用户协议</a><span>|</span>
+						<a href="">账号协议</a><span>|</span>
+						<a href="">问题反馈</a><span>|</span>
+						<a href="">廉正举报</a><span>|</span>
+						<a href="">诚信合规</a><span>|</span>
+						<a href="">Select Region</a>
+					</div>
+					<p>
+					© mi.com 京ICP证XXXXX号 京ICP备XXXXXXX号 京公网安备XXXXXXXXX号 京网文[2017]XXXXX号 <br>
+					（京）网械平台备字（2018）第XXXX号 互联网药品信息服务资格证 (京) -非经营性-XXXXXX 营业执照 医疗器械公告 <br>
+					增值电信业务许可证  网络食品经营备案（京）XXXXXXXXXX   食品经营许可证 <br>
+					违法和不良信息举报电话：185-0130-1238 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+					</p>
+					<div class="logoLi m1">
+						<img src="img/truste.png" >
+						<img src="img/v-logo-2.png">
+						<img src="img/v-logo-1.png">
+						<img src="img/v-logo-3.png">
+						<img src="img/vlogo4.png">
+					</div>
+					<div class="miL"></div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!-- 底部 end-->
+		
+	</body>
+</html>

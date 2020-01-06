@@ -1,0 +1,78 @@
+.product {
+  height: 424px;
+  background: url(../img/t10.png) no-repeat center center;
+}
+.product .desc .con {
+  padding-top: 10px;
+}
+.product .desc .con .row p {
+  color: #666;
+  line-height: 36px;
+  font-size: 16px;
+}
+.product .desc .con .row p span {
+  font-size: 24px;
+  font-weight: bold;
+}
+.cards .series-one {
+  padding: 0;
+}
+.cards .series-one img {
+  width: 100%;
+}
+.cards .series-two {
+  padding: 0;
+}
+.cards .series-two img {
+  width: 100%;
+}
+.cards .series-three {
+  padding: 0;
+}
+.cards .series-three img {
+  width: 100%;
+}
+.cards .series-four {
+  padding: 0;
+}
+.cards .series-four img {
+  width: 100%;
+}
+.cards .series-five {
+  padding: 0;
+}
+.cards .series-five img {
+  width: 100%;
+}
+.cards .series-six {
+  padding: 0;
+}
+.cards .series-six img {
+  width: 100%;
+}
+.cards .series-seven {
+  padding: 0;
+}
+.cards .series-seven img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .product .desc {
+    margin-top: 10%;
+  }
+  .product .desc h2 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .product .desc {
+    margin-left: 40%;
+    margin-top: 10%;
+  }
+  .product .desc h2 {
+    font-size: 20px;
+  }
+  .product .desc p {
+    padding-right: 100px;
+  }
+}

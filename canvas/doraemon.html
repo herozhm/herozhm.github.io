@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>哆啦A梦</title>
+    <style>
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <canvas id="canvas" width="400" height="600" style="border: 2px solid #000;"></canvas>
+    </div>
+
+    <script>
+        /**@type {HTMLCanvasElement}*/
+        var canvas = document.querySelector("#canvas");
+        var ctx = canvas.getContext("2d");
+
+        // 脸
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.arc(200, 175, 175, 0, 2 * Math.PI);
+        ctx.fillStyle = "skyblue";
+        ctx.fill();
+        ctx.stroke();
+
+        // 脸框
+        ctx.beginPath();
+        ctx.fillStyle = "#fff";
+        ctx.moveTo(110, 110);
+        ctx.quadraticCurveTo(-10, 200, 120, 315);
+        ctx.lineTo(280, 315);
+        ctx.quadraticCurveTo(410, 210, 290, 110);
+        ctx.lineTo(110, 110);
+        ctx.fill();
+        ctx.stroke();
+
+
+        //眼睛
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.fillStyle = "#fff";
+        ctx.moveTo(110, 100);
+        ctx.bezierCurveTo(110, 25, 200, 25, 200, 100);
+        ctx.bezierCurveTo(200, 175, 110, 175, 110, 100);
+        ctx.moveTo(200, 100);
+        ctx.bezierCurveTo(200, 25, 290, 25, 290, 100);
+        ctx.bezierCurveTo(290, 175, 200, 175, 200, 100);
+        ctx.fill();
+        ctx.stroke();
+
+        //鼻子
+        ctx.beginPath();
+        ctx.arc(200, 165, 25, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+        // 眼珠
+        // 右
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(230, 130, 12, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        // 左
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(170, 130, 12, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        // 胡子
+        //三须
+        ctx.beginPath();
+        ctx.moveTo(80, 175);
+        ctx.lineTo(150, 195);
+        ctx.moveTo(80, 200);
+        ctx.lineTo(150, 205);
+        ctx.moveTo(80, 225);
+        ctx.lineTo(150, 215);
+        ctx.moveTo(200, 195);
+        ctx.lineTo(200, 290);
+
+        ctx.moveTo(250, 195);
+        ctx.lineTo(320, 175);
+        ctx.moveTo(250, 205);
+        ctx.lineTo(320, 200);
+        ctx.moveTo(250, 215);
+        ctx.lineTo(320, 225);
+        ctx.moveTo(80, 240);
+        ctx.quadraticCurveTo(200, 350, 320, 240);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(96, 316);
+        ctx.lineTo(305, 316);
+
+        // 脖子
+        ctx.lineTo(320, 316);
+        ctx.arcTo(330, 316, 330, 326, 10);
+        ctx.lineTo(330, 336);
+        ctx.arcTo(330, 346, 305, 346, 10);
+        ctx.lineTo(81, 346);
+        ctx.arcTo(71, 346, 71, 336, 10);
+        ctx.lineTo(71, 326);
+        ctx.arcTo(71, 316, 81, 316, 10);
+        ctx.lineTo(96, 316);
+        ctx.fillStyle = "deepskyblue";
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
